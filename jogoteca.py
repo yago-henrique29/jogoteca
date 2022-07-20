@@ -14,8 +14,10 @@ jogo2 = jogos('Cs', 'FPS', 'PC')
 jogo3 = jogos('Dota', 'Moba', 'PC')
 lista = [jogo1, jogo2, jogo3]
 
-@app.route('/inicio')
+@app.route('/')
 def ola():
     return render_template('lista.html',titulo='Meus Jogos', jogos=lista)
-
+@app.route('/novo')
+def site():
+    return render_template('novo.html', titulo='Crie aqui')
 app.run()
